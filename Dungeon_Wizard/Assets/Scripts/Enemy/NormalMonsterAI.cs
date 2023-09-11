@@ -15,6 +15,7 @@ public class NormalMonsterAI : MonoBehaviour
     protected float distanceToTarget = Mathf.Infinity;
     protected bool isDead = false;
     AudioSource monsterSoundSource;
+    float playerAtt;
 
 
     // Start is called before the first frame update
@@ -27,6 +28,7 @@ public class NormalMonsterAI : MonoBehaviour
         monsterStat = GetComponent<Monster>();
         monsterBody.gameObject.SetActive(true);
         monsterSoundSource = GetComponent<AudioSource>();
+        playerAtt = playerStat.GetAtt();
     }
 
     // Update is called once per frame
@@ -80,7 +82,7 @@ public class NormalMonsterAI : MonoBehaviour
         if(other.gameObject.tag == "FireBall"){
             monsterAnimator.SetTrigger("GetHit");
             Debug.Log("파이어볼 맞음");
-            monsterStat.MonsterHitByPlayer(5f);
+            monsterStat.MonsterHitByPlayer(5f * (playerAtt * 0.2f));
         }
 
         if (monsterStat.GetMonsterHp() <= 0f)
@@ -103,11 +105,11 @@ public class NormalMonsterAI : MonoBehaviour
             //     break;
             case "FireStream":
                 Debug.Log("불기둥 맞음");
-                monsterStat.MonsterHitByPlayer(0.08f);
+                monsterStat.MonsterHitByPlayer(0.08f * (playerAtt * 0.01f));
                 break;
             case "EarthShatter":
                 Debug.Log("지진 맞음");
-                monsterStat.MonsterHitByPlayer(10f);
+                monsterStat.MonsterHitByPlayer(10f * (playerAtt * 0.5f));
                 break;
             default:
                 break;

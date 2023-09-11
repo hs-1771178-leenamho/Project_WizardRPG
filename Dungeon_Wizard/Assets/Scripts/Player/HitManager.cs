@@ -9,6 +9,7 @@ public class HitManager : MonoBehaviour
     [SerializeField] AudioClip hitSound;
     AudioSource playerAudioSource;
     PlayerStat playerStat;
+    float playerDef;
 
     // Start is called before the first frame update
     void Start()
@@ -16,6 +17,7 @@ public class HitManager : MonoBehaviour
         playerStat = FindObjectOfType<PlayerStat>();
         playerAudioSource = GetComponent<AudioSource>();
         playerAudioSource.clip = hitSound;
+        playerDef = playerStat.GetDef();
     }
 
     // Update is called once per frame
@@ -29,7 +31,7 @@ public class HitManager : MonoBehaviour
         if(playerStat == null) return;
         // 몬스터의 dmg를 인자로 넣어야함
         playerAudioSource.Play();
-        playerStat.GetDamage(_dmg);
+        playerStat.GetDamage(_dmg - (playerDef * 0.1f));
         //playerAnimator.ResetTrigger("GetHit");
         
     }
