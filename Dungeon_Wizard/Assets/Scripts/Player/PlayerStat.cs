@@ -68,6 +68,7 @@ public class PlayerStat : MonoBehaviour
     }
     public void GetDamage(float _dmg)
     {
+        if(_dmg <= 0f) _dmg = 1f;
         this.Hp -= _dmg;
         Debug.Log(this.Hp);
         playerInfo.SetInfoHp(this.Hp);

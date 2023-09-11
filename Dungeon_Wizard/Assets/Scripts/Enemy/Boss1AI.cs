@@ -16,6 +16,7 @@ public class Boss1AI : MonoBehaviour
     AudioSource audioSource;
     float distanceToTarget = Mathf.Infinity;
     bool isDead = false;
+    float playerAtt;
 
 
     // Start is called before the first frame update
@@ -29,6 +30,7 @@ public class Boss1AI : MonoBehaviour
         dungeonClear = FindObjectOfType<DungeonClear>();
         bossBody.gameObject.SetActive(true);
         audioSource = GetComponent<AudioSource>();
+        playerAtt = playerStat.GetAtt();
     }
 
     // Update is called once per frame
@@ -110,7 +112,7 @@ public class Boss1AI : MonoBehaviour
         {
             bossAnimator.SetTrigger("GetHit");
             Debug.Log("파이어볼 맞음");
-            bossStat.MonsterHitByPlayer(5f);
+            bossStat.MonsterHitByPlayer(5f * (playerAtt * 0.2f));
         }
 
         if (bossStat.GetMonsterHp() <= 0f)
@@ -133,11 +135,11 @@ public class Boss1AI : MonoBehaviour
             //     break;
             case "FireStream":
                 Debug.Log("불기둥 맞음");
-                bossStat.MonsterHitByPlayer(0.08f);
+                bossStat.MonsterHitByPlayer(0.08f * (playerAtt * 0.01f));
                 break;
             case "EarthShatter":
                 Debug.Log("지진 맞음");
-                bossStat.MonsterHitByPlayer(10f);
+                bossStat.MonsterHitByPlayer(10f * (playerAtt * 0.5f));
                 break;
             default:
                 break;
