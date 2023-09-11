@@ -1,0 +1,58 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - CinemachineTarget
+  - Portal
+  - Treasure
+  - FireBall
+  - EarthShatter
+  - FireStream
+  - SpawnTrigger
+  - EquipStore
+  - Magic2Scroll
+  - Magic3Scroll
+  - SmallPotion
+  - MiddlePotion
+  - LargePotion
+  - AlchemyStore
+  - Motel
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - Check Ray
+  - Water
+  - UI
+  - PostProcessing
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
