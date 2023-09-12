@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+
 public class MagicShoot : MonoBehaviour
 {
 
@@ -11,13 +12,14 @@ public class MagicShoot : MonoBehaviour
     [SerializeField] Image magic1ButtonImg;
     [SerializeField] Image magic2ButtonImg;
     [SerializeField] Image magic3ButtonImg;
+    [SerializeField] MagicCoolTime[] magicCoolTime;
 
     GameObject fireMagic;
     int magicNum;
     public bool magic2Lock = false;
     public bool magic3Lock = false;
     PlayerInfo playerInfo;
-
+    
     Color originColor = new Color(255f,255f,255f);
     Color selectedColor = new Color(255f,255f,0);
     
@@ -26,6 +28,7 @@ public class MagicShoot : MonoBehaviour
     void Start()
     {
         playerInfo = FindObjectOfType<PlayerInfo>();
+        //magicCoolTime = FindObjectsOfType<MagicCoolTime>();
         if(playerInfo == null) {
             Debug.Log("으이잉");
             return;
@@ -81,19 +84,22 @@ public class MagicShoot : MonoBehaviour
 
     public void ShootFireBall()
     {
-        if (magicPos != null && fireMagic != null)
+        if (magicPos != null && fireMagic != null )
         {
             if(magicNum == 0)
             { 
                 Instantiate(fireMagic, magicPos.transform.position, magicPos.transform.rotation);
+                magicCoolTime[0].UseSkill();
             }
             else if(magicNum == 1)
             {
                 Instantiate(fireMagic, magicPos.transform.position, magicPos.transform.rotation);
+                magicCoolTime[1].UseSkill();
             }
             else
             {
                 Instantiate(fireMagic, new Vector3(magicPos.transform.position.x, 0f, magicPos.transform.position.z), magicPos.transform.rotation);
+                magicCoolTime[2].UseSkill();
             }
             
         }
