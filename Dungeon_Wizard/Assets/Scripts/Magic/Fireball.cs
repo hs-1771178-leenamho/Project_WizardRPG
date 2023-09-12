@@ -8,9 +8,9 @@ public class Fireball : MonoBehaviour
     [SerializeField] GameObject explosion;
     [SerializeField] GameObject fire;
     
-    MagicType magicType;
+    //MagicType magicType;
     void Start(){
-        this.magicType = MagicType.FireBall;
+        //this.magicType = MagicType.FireBall;
     }
 
     void OnEnable() {
@@ -18,12 +18,15 @@ public class Fireball : MonoBehaviour
         explosion.SetActive(false);
         fire.SetActive(true);
         this.gameObject.GetComponent<Rigidbody>().AddRelativeForce(Vector3.forward * fireballSpeed);
-       // Destroy(this.gameObject,2f);    
+       // Destroy(this.gameObject,2f);
     }
 
     void OnCollisionEnter(Collision other) {
         fire.SetActive(false);
         explosion.SetActive(true);
-        Destroy(this.gameObject,2f);    
+        Destroy(this.gameObject,2f);   
+        
     }
+
+    
 }

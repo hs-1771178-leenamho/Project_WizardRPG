@@ -474,6 +474,22 @@ PrefabInstance:
       propertyPath: hitSound
       value: 
       objectReference: {fileID: 8300000, guid: 9758fed8b3c0bdd4e95c3bb0dc59bd6b, type: 3}
+    - target: {fileID: 2128694280974740597, guid: e27ba725a00ac2d4bacf73413fe69236, type: 3}
+      propertyPath: magicCoolTime.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2128694280974740597, guid: e27ba725a00ac2d4bacf73413fe69236, type: 3}
+      propertyPath: magicCoolTime.Array.data[0]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2128694280974740597, guid: e27ba725a00ac2d4bacf73413fe69236, type: 3}
+      propertyPath: magicCoolTime.Array.data[1]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2128694280974740597, guid: e27ba725a00ac2d4bacf73413fe69236, type: 3}
+      propertyPath: magicCoolTime.Array.data[2]
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 2401510352674136039, guid: e27ba725a00ac2d4bacf73413fe69236, type: 3}
       propertyPath: actionText
       value: 

@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class EarthShatter : MonoBehaviour
 {
-    MagicType magicType;
+   // MagicType magicType;
 
     void Start(){
-        this.magicType = MagicType.EarthShatter;
+        //this.magicType = MagicType.EarthShatter;
     }
     void OnEnable(){
         Destroy(this.gameObject, 3f);

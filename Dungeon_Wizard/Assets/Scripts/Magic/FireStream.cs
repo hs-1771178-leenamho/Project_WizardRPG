@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class FireStream : MonoBehaviour
 {
-    MagicType magicType;
+    //MagicType magicType;
     // Start is called before the first frame update
     void Start()
     {
-        this.magicType = MagicType.FireStream;
+       // this.magicType = MagicType.FireStream;
     }
 
     // Update is called once per frame
