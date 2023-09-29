@@ -159,6 +159,8 @@ MonoBehaviour:
   AlertWindow: {fileID: 1686791307}
   AlertText: {fileID: 156799036}
   buttonClickSFXManager: {fileID: 1571104384}
+  M2_button: {fileID: 1787010579}
+  M3_button: {fileID: 14196490}
 --- !u!114 &7563610
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21481,33 +21483,9 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 114977813, guid: 6354838f2a48086439e7c7e93c2c55b4, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114977813, guid: 6354838f2a48086439e7c7e93c2c55b4, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114977813, guid: 6354838f2a48086439e7c7e93c2c55b4, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 2096623311}
-    - target: {fileID: 114977813, guid: 6354838f2a48086439e7c7e93c2c55b4, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 114977813, guid: 6354838f2a48086439e7c7e93c2c55b4, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: ResumeGame
-      objectReference: {fileID: 0}
-    - target: {fileID: 114977813, guid: 6354838f2a48086439e7c7e93c2c55b4, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: PauseMenuController, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 114977813, guid: 6354838f2a48086439e7c7e93c2c55b4, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
     - target: {fileID: 7050332564672025906, guid: 6354838f2a48086439e7c7e93c2c55b4, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -21596,10 +21574,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: PauseCanvas
       objectReference: {fileID: 0}
-    - target: {fileID: 7050332564672025918, guid: 6354838f2a48086439e7c7e93c2c55b4, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 7050332564865436523, guid: 6354838f2a48086439e7c7e93c2c55b4, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -21612,14 +21586,6 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 2096623311}
-    - target: {fileID: 7050332565941606995, guid: 6354838f2a48086439e7c7e93c2c55b4, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SaveGame
-      objectReference: {fileID: 0}
-    - target: {fileID: 7050332565941606995, guid: 6354838f2a48086439e7c7e93c2c55b4, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: PauseMenuController, Assembly-CSharp
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6354838f2a48086439e7c7e93c2c55b4, type: 3}
 --- !u!1001 &7940072099898651574

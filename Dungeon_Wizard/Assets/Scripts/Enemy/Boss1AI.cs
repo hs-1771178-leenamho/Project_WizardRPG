@@ -112,7 +112,7 @@ public class Boss1AI : MonoBehaviour
         {
             bossAnimator.SetTrigger("GetHit");
             Debug.Log("파이어볼 맞음");
-            bossStat.MonsterHitByPlayer(5f * (playerAtt * 0.2f));
+            bossStat.MonsterHitByPlayer(3f * (playerAtt * 0.2f));
         }
 
         if (bossStat.GetMonsterHp() <= 0f)
@@ -139,7 +139,7 @@ public class Boss1AI : MonoBehaviour
                 break;
             case "EarthShatter":
                 Debug.Log("지진 맞음");
-                bossStat.MonsterHitByPlayer(10f * (playerAtt * 0.5f));
+                bossStat.MonsterHitByPlayer(3f * (playerAtt * 0.1f));
                 break;
             default:
                 break;

@@ -5,7 +5,22 @@ using UnityEngine.UI;
 
 public class AlchemyShop : Shop
 {
+    [SerializeField] Button M2_button;
+    [SerializeField] Button M3_button;
     MagicShoot magicShoot;
+
+    PlayerInfo playerInfo;
+    bool magic2Lock;
+    bool magic3Lock;
+
+    void OnEnable() {
+        playerInfo = FindObjectOfType<PlayerInfo>();
+        magic2Lock = playerInfo.GetInfoM2Lock();
+        magic3Lock = playerInfo.GetInfoM3Lock();
+
+        M2_button.interactable = magic2Lock;
+        M3_button.interactable = magic3Lock;
+    }
 
     public override void Purchase()
     {

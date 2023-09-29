@@ -72,7 +72,7 @@ public class Shop : MonoBehaviour
             player.ReduceGold(shoppingCost);
             // 구매 성공 스크린을 띄우기
             // 구매한 아이템 버튼을 disable 시켜버리기
-            itemToBuy.gameObject.GetComponent<Button>().interactable = false;
+            //itemToBuy.gameObject.GetComponent<Button>().interactable = false;
             if (AlertWindow == null || AlertText == null) return;
             AlertText.text = "구매 했습니다.";
             AlertWindow.gameObject.SetActive(true);
