@@ -908,6 +908,39 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bea0a72c7a515354f903b998b3e17ecc, type: 3}
+--- !u!114 &44415473 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1670810959, guid: bea0a72c7a515354f903b998b3e17ecc, type: 3}
+  m_PrefabInstance: {fileID: 44415472}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87351bd30cb8d714295f5a888f67d5f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &44415474 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 920396691, guid: bea0a72c7a515354f903b998b3e17ecc, type: 3}
+  m_PrefabInstance: {fileID: 44415472}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87351bd30cb8d714295f5a888f67d5f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &44415475 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1780860362, guid: bea0a72c7a515354f903b998b3e17ecc, type: 3}
+  m_PrefabInstance: {fileID: 44415472}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87351bd30cb8d714295f5a888f67d5f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &52908388
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4441,6 +4474,10 @@ PrefabInstance:
     - target: {fileID: 8412271412260402976, guid: 1467a9b70c39ec74abd09f672042f8c1, type: 3}
       propertyPath: m_Name
       value: PauseCanvasInDungeon
+      objectReference: {fileID: 0}
+    - target: {fileID: 8412271412260402976, guid: 1467a9b70c39ec74abd09f672042f8c1, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8412271412260402988, guid: 1467a9b70c39ec74abd09f672042f8c1, type: 3}
       propertyPath: m_Pivot.x
@@ -11685,6 +11722,18 @@ PrefabInstance:
       propertyPath: magic3ButtonImg
       value: 
       objectReference: {fileID: 309621199}
+    - target: {fileID: 8339093840224311722, guid: d9ff240b50b2a534b8f7d2e8079e9505, type: 3}
+      propertyPath: magicCoolTime.Array.data[0]
+      value: 
+      objectReference: {fileID: 44415475}
+    - target: {fileID: 8339093840224311722, guid: d9ff240b50b2a534b8f7d2e8079e9505, type: 3}
+      propertyPath: magicCoolTime.Array.data[1]
+      value: 
+      objectReference: {fileID: 44415474}
+    - target: {fileID: 8339093840224311722, guid: d9ff240b50b2a534b8f7d2e8079e9505, type: 3}
+      propertyPath: magicCoolTime.Array.data[2]
+      value: 
+      objectReference: {fileID: 44415473}
     - target: {fileID: 8473400547275435217, guid: d9ff240b50b2a534b8f7d2e8079e9505, type: 3}
       propertyPath: m_LocalPosition.z
       value: -0.01

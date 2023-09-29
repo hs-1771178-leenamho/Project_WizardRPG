@@ -58,6 +58,9 @@ public class PauseMenuController : MonoBehaviour
     }
 
     public void GoBackToTown(){
+        Cursor.visible = false;
+        playerRaycast.MovementAble();
+        Time.timeScale = 1f;
         SceneManager.LoadScene(1);
     }
 }

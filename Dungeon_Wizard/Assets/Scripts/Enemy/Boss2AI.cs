@@ -9,6 +9,7 @@ public class Boss2AI : MonoBehaviour
     [SerializeField] GameObject throwingStone;
     [SerializeField] GameObject stoneSpawnPoint;
     [SerializeField] AudioClip deadSound;
+    [SerializeField] AudioClip throwSound;
     Transform targetTransform;
     NavMeshAgent navMeshAgent;
     Animator bossAnimator;
@@ -93,7 +94,8 @@ public class Boss2AI : MonoBehaviour
         Vector3 velocity = GetVelocity(stoneSpawnPoint.transform.position, targetTransform.transform.position, initialAngle);
         fired_rock = Instantiate(throwingStone, stoneSpawnPoint.transform.position, Quaternion.identity) as GameObject;
         fired_rock.GetComponent<Rigidbody>().velocity = velocity;
-
+        audioSource.clip = throwSound;
+        audioSource.Play();
     }
 
     Vector3 GetVelocity(Vector3 spawnPos, Vector3 target, float initialAngle)
@@ -125,7 +127,7 @@ public class Boss2AI : MonoBehaviour
         if(other.gameObject.tag == "FireBall"){
             bossAnimator.SetTrigger("GetHit");
             Debug.Log("파이어볼 맞음");
-            bossStat.MonsterHitByPlayer(5f * (playerAtt * 0.2f));
+            bossStat.MonsterHitByPlayer(3f * (playerAtt * 0.2f));
         }
 
         if (bossStat.GetMonsterHp() <= 0f)
@@ -153,7 +155,7 @@ public class Boss2AI : MonoBehaviour
                 break;
             case "EarthShatter":
                 Debug.Log("지진 맞음");
-                bossStat.MonsterHitByPlayer(10f * (playerAtt * 0.5f));
+                bossStat.MonsterHitByPlayer(3f * (playerAtt * 0.1f));
                 break;
             default:
                 break;

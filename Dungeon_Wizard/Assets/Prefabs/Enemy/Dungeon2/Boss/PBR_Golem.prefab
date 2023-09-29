@@ -135,6 +135,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac63c718c379b2a4c933f5f7c6226a1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  MaxHp: 0
   Hp: 100
   Att: 10
   Def: 1
@@ -156,6 +157,7 @@ MonoBehaviour:
   throwingStone: {fileID: 1375754531036840, guid: b01fd0d998f5c9143b471ee5658d7db3, type: 3}
   stoneSpawnPoint: {fileID: 8882483395611910979}
   deadSound: {fileID: 8300000, guid: 0b782c04664570d49aa7d95e9b12f04f, type: 3}
+  throwSound: {fileID: 8300000, guid: 3c4dda30d3bffb54082de1741bf45c65, type: 3}
 --- !u!195 &2421096942691767497
 NavMeshAgent:
   m_ObjectHideFlags: 0

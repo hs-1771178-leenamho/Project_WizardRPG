@@ -98,7 +98,7 @@ public class MagicShoot : MonoBehaviour
             }
             else
             {
-                Instantiate(fireMagic, new Vector3(magicPos.transform.position.x, 0f, magicPos.transform.position.z), magicPos.transform.rotation);
+                Instantiate(fireMagic, new Vector3(magicPos.transform.position.x, magicPos.transform.position.y-1.2f, magicPos.transform.position.z), magicPos.transform.rotation);
                 magicCoolTime[2].UseSkill();
             }
             
